@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: requirements-txt-fixer
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+      - id: flake8
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: ["-rn", "-sn", "--rcfile=.pylintrc", "--fail-on=I"]
+        exclude: tests(/\w*)*/functional/|tests/input|tests(/\w*)*data/|doc/
+      - id: unittest
+        name: unittest
+        entry: python3.10 -m unittest
+        args: ["-v"]
+        language: system
+        types: [python]
+        pass_filenames: true
+        stages: [commit]
+        verbose: true
