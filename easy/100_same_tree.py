@@ -26,7 +26,7 @@ class Solution:
                         return
                     bfs(root_p.left, root_q.left)
                     bfs(root_p.right, root_q.right)
-            return
+
         bfs()
         return out
 
