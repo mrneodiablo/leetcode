@@ -38,15 +38,15 @@ class TestFunctions(unittest.TestCase):
             "incorrect, expect is " + str(expect)
         )
 
-    # def test_run_2(self):
-    #     # test case
-    #     numRows = 1
-    #     expect = [[1]]
-    #     self.assertEqual(
-    #         str(self.solution.generate(numRows)),
-    #         str(expect),
-    #         "incorrect, expect is " + str(expect)
-    #     )
+    def test_run_2(self):
+        # test case
+        numRows = 1
+        expect = [[1]]
+        self.assertEqual(
+            str(self.solution.generate(numRows)),
+            str(expect),
+            "incorrect, expect is " + str(expect)
+        )
 
 
 if __name__ == "__main__":
