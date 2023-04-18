@@ -28,16 +28,16 @@ class TestFunctions(unittest.TestCase):
         super().__init__(methodName)
         self.solution = Solution()
 
-    # def test_run_1(self):
-    #     # test case
-    #     nums = [1,1,1]
-    #     k = 2
-    #     expect = 2
-    #     self.assertEqual(
-    #         str(self.solution.subarraySum(nums,k)),
-    #         str(expect),
-    #         "incorrect, expect is " + str(expect)
-    #     )
+    def test_run_1(self):
+        # test case
+        nums = [1, 1, 1]
+        k = 2
+        expect = 2
+        self.assertEqual(
+            str(self.solution.subarraySum(nums, k)),
+            str(expect),
+            "incorrect, expect is " + str(expect)
+        )
 
     def test_run_2(self):
         # test case
