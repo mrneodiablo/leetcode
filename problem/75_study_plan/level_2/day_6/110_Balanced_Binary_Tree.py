@@ -37,17 +37,17 @@ class TestFunctions(unittest.TestCase):
         super().__init__(methodName)
         self.solution = Solution()
 
-    # def test_run_1(self):
-    #     # test case
-    #     root = TreeNode(
-    #         3,
-    #         left=TreeNode(9),
-    #         right=TreeNode(20, TreeNode(15), TreeNode(7)),
-    #     )
-    #     expect = True
-    #     self.assertEqual(str(self.solution.isBalanced(root)),
-    #                      str(expect),
-    #                      "incorrect, expect is " + str(expect))
+    def test_run_1(self):
+        # test case
+        root = TreeNode(
+            3,
+            left=TreeNode(9),
+            right=TreeNode(20, TreeNode(15), TreeNode(7)),
+        )
+        expect = True
+        self.assertEqual(str(self.solution.isBalanced(root)),
+                         str(expect),
+                         "incorrect, expect is " + str(expect))
 
     def test_run_2(self):
         # test case
